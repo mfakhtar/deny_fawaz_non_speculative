@@ -1,0 +1,10 @@
+import "tfrun"
+
+deny_fawaz_non_speculative = (
+  tfrun.created_by == "fawazakhtar" and
+  tfrun.speculative == false
+)
+
+main = rule {
+  not deny_fawaz_non_speculative
+}
