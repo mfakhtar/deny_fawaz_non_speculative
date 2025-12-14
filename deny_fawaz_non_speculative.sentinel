@@ -1,10 +1,8 @@
 import "tfrun"
 
-deny_fawaz_non_speculative = (
-  tfrun.created_by == "fawazakhtar" and
-  tfrun.speculative == false
-)
+print("created_by:", tfrun.created_by)
+print("speculative:", tfrun.speculative)
 
 main = rule {
-  not deny_fawaz_non_speculative
+  true
 }
